@@ -1,0 +1,89 @@
+{{define "layout"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container" style="margin-top: 15px"><!-- Container  -->
+    <div class="row"><!--NAME-->
+        <h1 style="color: orangered">▍{{.Product.Name}}</h1>
+    </div><!--NAME-->
+    <div class="row" style="height: 570px"><!-- ROW Photo + Name + (Important characteristics+ Description) -->
+    <div class="col-md-7" ><!-- PHOTO  -->
+
+        <div class="row"><!-- LARGE PHOTO  -->
+            <img style="height: 500px;width: 500px" src="{{.Product.Photo}}" alt="Photo">
+        </div><!-- LARGE PHOTO  -->
+            <div class="row" style="height: 110px;margin-top: 10px"><!-- Vertical PHOTO  -->
+
+
+                <div style="height: 100px;" ><img style="height: 100px;width: 100px;margin-right: 5px" src="{{.Product.Photo}}" alt="LitllePhoto"></div>
+                <div style="height: 100px;" ><img style="height: 100px;width: 100px;margin-right: 5px" src="{{.Product.Photo}}" alt="LitllePhoto"></div>
+                <div style="height: 100px;" ><img style="height: 100px;width: 100px;margin-right: 5px" src="{{.Product.Photo}}" alt="LitllePhoto"></div>
+                <div style="height: 100px;" ><img style="height: 100px;width: 100px" src="{{.Product.Photo}}" alt="LitllePhoto"></div>
+
+            </div><!-- Vertical PHOTO  -->
+    </div><!-- PHOTO  -->
+    <div class="col-md-5">
+        {{.Product.Characteristics}}
+        <h3>-{{.Product.Description}}</h3>
+        <a target="_blank" href="https://www.instagram.com/explore/tags/{{.Product.Name}}/">Ссылка на фото этого инструмента у пользователей</a>
+        <a target="_blank" href="https://www.youtube.com/results?search_query={{.Product.Name}}/" >Ссылка на видео этого инструмента у пользователей</a>
+    </div><!-- ROW Photo + Name + (Important characteristics+ Description) -->
+</div><!-- ContainerEND  -->
+
+<div class="container" style="margin-top: 50px"><!-- ContainerSTART  YouTUBE + Comments and so on-->
+    <div class="row"><!-- Youtube  -->
+        <div class="row" style="height: 200px;margin-right: 10px"><iframe id="ytplayer" type="text/html" width="380" height="200"
+                                                        src="http://www.youtube.com/embed?listType=search&list={{.Product.Name}}+характеристики"
+                                                        frameborder="0" allowfullscreen>
+            </iframe></div>
+        <div class="row" style="height: 200px;margin-right: 10px"><iframe id="ytplayer" type="text/html" width="380" height="200"
+                                                        src="http://www.youtube.com/embed?listType=search&list={{.Product.Name}}+обзор"
+                                                        frameborder="0" allowfullscreen>
+            </iframe></div>
+        <div class="row" style="height: 200px;"><iframe id="ytplayer" type="text/html" width="380" height="200"
+                                                        src="http://www.youtube.com/embed?listType=search&list={{.Product.Name}}"
+                                                        frameborder="0" allowfullscreen>
+            </iframe></div>
+    </div><!-- Youtube  -->
+
+    <div class="row" style="margin-top: 5px "><!--   BUTTONS-->
+        <div class="col-md-12"
+                {{/*                 style="background-color: bisque"*/}}
+        >
+            <form>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button  class="btn btn-primary" formaction="/topics">Forum</button>
+                    <button class="btn btn-primary disabled" formaction="/">Friends</button>
+                    <button class="btn btn-primary " formaction="/chats">Chats</button>
+                    <button class="btn btn-primary" formaction="/edit">Settings</button>
+                    <button class="btn btn-primary" formaction="/search">Search</button>
+                    {{/*                    <input type="search" style="float: right; padding: 5px">*/}}
+                    {{/*                    <input type="button" value="Search" style="float: right; padding: 5px">*/}}
+
+                </div>
+            </form>
+        </div>
+    </div><!--   BUTTONS-->
+
+    <div class="row" style="margin-top: 40px" ><!--ROW Char + Comments-->
+        <div class="col-md-6" style="border: #dd3333 solid 2px;height: 500px"><!--Characteristics-->
+            {{.Product.Characteristics}}
+        </div><!--Characteristics-->
+        <div class="col-md-6"  style="border: chartreuse solid 2px;height: 500px"><!--Comments-->
+        Comments
+            <div id="comments"></div>
+
+        </div><!--Comments-->
+    </div><!--ROW Char + Comments-->
+</div><!-- Container END -->
+</div>
+            <script src="js/react.jsx" type="text/jsx"></script>
+<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+</body>
+</html>
+{{end}}

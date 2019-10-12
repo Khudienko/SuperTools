@@ -1,0 +1,4 @@
+development:
+  dialect: postgres
+  datasource: dbname=tools sslmode=disable user=postgres password=root port=5432
+  dir: gomigrations/migrations

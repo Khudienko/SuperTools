@@ -1,0 +1,98 @@
+{{define "layout"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Power tools</title>
+    <style>
+        .opacity {
+            -moz-transition: all 0.4s;
+            -webkit-transition: all 0.4s;
+            -ms-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            transition: all 0.4s;
+            opacity:1;
+            filter:alpha(opacity=100);
+        }
+
+        .opacity:hover {
+            opacity:0.5;
+            filter:alpha(opacity=50);
+        }
+
+        .clarity {
+            opacity:0.5;
+            filter:alpha(opacity=50);
+        }
+
+        .clarity:hover {
+            -moz-transition: all 0.4s;
+            -webkit-transition: all 0.4s;
+            -ms-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            transition: all 0.4s;
+            opacity:1;
+            filter:alpha(opacity=100);
+        }
+        #pt-menu{
+            border: steelblue solid 2px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row" style="margin-top: 15px;">
+        <div class="opacity" id="pt-menu" data-toggle="tooltip" data-placement="bottom" title="Шуруповерты" ><a href="/powertools/sw-drivers">Шуруповерты<img src="powertools/skrewdriwer.png" style="height: 100px;width: 100px"></a></div>
+        <div class="opacity" id="pt-menu" data-toggle="tooltip" data-placement="bottom" title="Дрели" >Дрели<img src="powertools/drill.png" style="height: 100px;width: 100px"></div>
+        <div class="opacity" id="pt-menu" data-toggle="tooltip" data-placement="bottom" title="Перфораторы" >Перфораторы<img src="powertools/hammer.png" style="height: 100px;width: 100px"></div>
+
+    </div>
+
+
+
+    <h3 style="margin: 15px;text-align: center">Шуруповерты </h3>
+    <div class="row clarity"><!-- ROW Screw drivers -->
+        <div class="col-md-4"><img  src="powertools/skrewdriwer.png"></div>
+        <div class="col-md-8">
+           <p style="text-align: center;font-size: 20px;padding: 15px">
+               <b>Шуруповерт</b> - важный инструмент в арсенале домашнего или профессионального набора инструментов.
+                Главным предназначением устройства является закручивание и откручивание крепежных элементов,
+                таких как саморезы или шурупы. Если вы хотите повесить на стену новое семейное фото, картину, или зеркало - без шуруповерта не обойтись.
+           </p>
+            <a href="/powertools/sw-drivers" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style="float: right">Перейти</a>
+        </div>
+
+    </div><!-- ROW Screw drivers -->
+
+    <h3 style="margin: 15px;text-align: center">Дрели </h3>
+    <div class="row clarity"><!-- ROW Drills -->
+        <div class="col-md-4"><img src="powertools/drill.png"></div>
+        <div class="col-md-8">
+            <p style="text-align: center;font-size: 20px;padding: 15px">
+                <b>Дрель</b> — электрический инструмент, предназначенный для придачи вращательного движения сверлу или другому режущему инструменту
+                для сверления отверстий в различных материалах при проведении строительных, отделочных, столярных, слесарных и других работ
+            </p>
+            <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style="float: right">Перейти</a>
+        </div>
+    </div><!-- ROW Drills -->
+
+    <h3 style="margin: 15px;text-align: center">Перфораторы </h3>
+    <div class="row clarity"><!-- ROW Hammers -->
+        <div class="col-md-4"><img src="powertools/hammer.png"></div>
+        <div class="col-md-8">
+            <p style="text-align: center;font-size: 20px;padding: 15px">
+                <b>Перфора́тор</b> — ударная машина, обеспечивающая наряду с ударом, вращение рабочего инструмента.
+                В отличие от сверления перфоратор не сверлит отверстие острой кромкой сверла,
+                а пробивает отверстие буром, как зубилом, с механизированным вращением бура.
+            </p>
+            <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style="float: right">Перейти</a>
+        </div>
+    </div><!-- ROW Hammers -->
+
+</div>
+
+</body>
+</html>
+{{end}}

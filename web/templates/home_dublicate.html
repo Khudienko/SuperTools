@@ -1,0 +1,94 @@
+{{define "layout"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://bootstraptema.ru/snippets/menu/2017/vam.md.css" />
+    <script src="https://bootstraptema.ru/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="https://bootstraptema.ru/snippets/menu/2017/vam.md.js"></script>
+</head>
+<body>
+
+<div class="container" style="margin-top: 15px">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4" >
+            <div id="jquery-accordion-menu" class="jquery-accordion-menu shadow-none" >
+{{/*                <div class="jquery-accordion-menu-header" id="form"></div>*/}}
+                <ul id="demo-list">
+                    <li><a href="#"><i class="fa fa-glass"></i>Events </a></li>
+                    <li><a href="#"><i class="fa fa-file-image-o"></i>Gallery </a>
+                        <span class="jquery-accordion-menu-label">12 </span>
+                    </li>
+                    <li><a href="#"><i class="fa fa-cog"></i>Services </a>
+                        <ul class="submenu">
+                            <li><a href="#">Web Design </a></li>
+                            <li><a href="#">Hosting </a></li>
+                            <li><a href="#">Design </a>
+                                <ul class="submenu">
+                                    <li><a href="#">Graphics </a></li>
+                                    <li><a href="#">Vectors </a></li>
+                                    <li><a href="#">Photoshop </a></li>
+                                    <li><a href="#">Fonts </a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Consulting </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fa fa-home"></i>System </a></li>
+                    <li><a href="#"><i class="fa fa-suitcase"></i>Portfolio </a>
+                        <ul class="submenu">
+                            <li><a href="#">Web Design </a></li>
+                            <li><a href="#">Graphics </a>
+                                <span class="jquery-accordion-menu-label">10 </span>
+                            </li>
+                            <li><a href="#">Photoshop </a></li>
+                            <li><a href="#">Programming </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fa fa-user"></i>About </a></li>
+                    <li><a href="#"><i class="fa fa-envelope"></i>Contact </a></li>
+                </ul>
+            </div>
+        </div><!-- ./col-md-4 col-md-offset-4 -->
+        <div class="col-md-8" style="border: #3b424d solid 2px">Block</div><!-- ./slider -->
+    </div><!-- ./row -->
+    <div class="row" style="margin-top: 15px;padding-left: 15px">
+        <div class="col" style="border: #3b424d solid 2px;height: 100px;">bl1</div>
+        <div class="col" style="border: #3b424d solid 2px;height: 100px;">bl2</div>
+        <div class="col" style="float: right;border: #3b424d solid 2px;height: 100px;">bl3</div>
+    </div><!-- ./row -->
+    <div class="row" style="margin-top: 15px;padding-left: 15px">
+        <div class="col" style="border: #3b424d solid 2px;height: 100px;">bl1</div>
+        <div class="col" style="border: #3b424d solid 2px;height: 100px;">bl2</div>
+        <div class="col" style="float: right;border: #3b424d solid 2px;height: 100px;">bl3</div>
+    </div><!-- ./row -->
+    <section class="bg-warning text-center p-5 mt-4">
+        <div class="container p-3">
+            <h3>SUBSCRIBE NOW</h3>
+            <form action="#" method="Post">
+                <input type="text" name="text" placeholder="Enter Your Email Id">
+                <button type="button" class="btn btn-secondary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+</div><!-- ./container -->
+
+
+<script type="text/javascript">
+    //обработчик
+    jQuery(document).ready(function () {
+        jQuery("#jquery-accordion-menu").jqueryAccordionMenu();});
+    //активный класс
+    $(function(){
+        $("#demo-list li").click(function(){
+            $("#demo-list li.active").removeClass("active")
+            $(this).addClass("active");
+        })
+    })
+</script>
+</body>
+</html>
+{{end}}
