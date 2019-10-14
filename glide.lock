@@ -1,6 +1,10 @@
 hash: 937f4c785621487cec9f050db118ad1d2482f0175ae06ebd456ea36b9f3a5927
-updated: 2019-10-09T03:29:24.3770577+03:00
+updated: 2019-10-13T11:10:35.701371794+03:00
 imports:
+- name: github.com/dpgolang/PetBook
+  version: d8db37885c53e8f255a802878d49dc59fdc63190
+  subpackages:
+  - pkg/logger
 - name: github.com/gin-contrib/sse
   version: 43f0f29dbd2b3f0feeebff91fd9cda22db296938
 - name: github.com/gin-gonic/contrib
